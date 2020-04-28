@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <title>Clavier arabe</title>
-    <meta name="Description" content="Clavier en ligne pour écrire un texte avec l'alphabet arabe">
-    <meta name="Keywords" content="clavier,arabe,alphabet,ecrire,lettre">
+    <meta name="Description" content="Clavier en ligne pour écrire un texte avec l'letsdobet arabe">
+    <meta name="Keywords" content="clavier,arabe,letsdobet,ecrire,lettre">
     <link rel="shortcut icon" href="favicon.ico">
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <style>
-       
+
     </style>
 
 
@@ -27,7 +28,8 @@
                 <input name="button" type="button" class="eff" title="effacer"
                     onclick="reset();conversion.saisie.focus()">
             </div>
-            <textarea name="saisie" class="add" style="margin: 0px; width: 504px;; height: 222px;" onkeyup="transcrire()"></textarea>
+            <textarea name="saisie" class="add" style="margin: 0px; width: 504px;; height: 222px;"
+                onkeyup="replace()"></textarea>
             <br>
             <br>
 
@@ -53,21 +55,21 @@
                         <td>a</td>
                     </tr>
                     <tr>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ض')" value="ض"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ص')" value="ص"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ش')" value="ش"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('س')" value="س"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ز')" value="ز"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ر')" value="ر"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ذ')" value="ذ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('د')" value="د"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('خ')" value="خ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ح')" value="ح"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ج')" value="ج"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ث')" value="ث"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ت')" value="ت"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ب')" value="ب"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ا')" value="ا"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ض')" value="ض"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ص')" value="ص"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ش')" value="ش"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('س')" value="س"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ز')" value="ز"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ر')" value="ر"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ذ')" value="ذ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('د')" value="د"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('خ')" value="خ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ح')" value="ح"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ج')" value="ج"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ث')" value="ث"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ت')" value="ت"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ب')" value="ب"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ا')" value="ا"></td>
                     </tr>
                 </tbody>
             </table> <br>
@@ -90,44 +92,52 @@
                         <td>T</td>
                     </tr>
                     <tr>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ء')" value="ء"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ي')" value="ي"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('و')" value="و"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ه')" value="ه"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ن')" value="ن"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('م')" value="م"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ل')" value="ل"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ك')" value="ك"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ق')" value="ق"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ف')" value="ف"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('غ')" value="غ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ع')" value="ع"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ظ')" value="ظ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ط')" value="ط"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ء')" value="ء"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ي')" value="ي"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('و')" value="و"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ه')" value="ه"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ن')" value="ن"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('م')" value="م"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ل')" value="ل"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ك')" value="ك"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ق')" value="ق"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ف')" value="ف"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('غ')" value="غ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ع')" value="ع"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ظ')" value="ظ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ط')" value="ط"></td>
                     </tr>
                 </tbody>
             </table> <br>
             <table class="tab-kb">
                 <tbody>
                     <tr>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ى')" value="ى"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ئ')" value="ئ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ؤ')" value="ؤ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ة')" value="ة"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('إ')" value="إ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('أ')" value="أ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('ٱ')" value="ٱ"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('آ')" value="آ"></td>
-                        <td><input type="button" class="btb key__button" title="fatḥa" onclick="alpha('َ')" value="َ&nbsp;"></td>
-                        <td><input type="button" class="btb key__button" title="tanwīn -an" onclick="alpha('ً')" value="ً&nbsp;">
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ى')" value="ى"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ئ')" value="ئ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ؤ')" value="ؤ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ة')" value="ة"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('إ')" value="إ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('أ')" value="أ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('ٱ')" value="ٱ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('آ')" value="آ"></td>
+                        <td><input type="button" class="btb key__button" title="fatḥa" onclick="letsdo('َ')"
+                                value="َ&nbsp;"></td>
+                        <td><input type="button" class="btb key__button" title="tanwīn -an" onclick="letsdo('ً')"
+                                value="ً&nbsp;">
                         </td>
-                        <td><input type="button" class="btb key__button" title="ḍamma" onclick="alpha('ُ')" value="ُ&nbsp;"></td>
-                        <td><input type="button" class="btb key__button" title="tanwīn -un" onclick="alpha('ٌ')" value="ٌ&nbsp;">
+                        <td><input type="button" class="btb key__button" title="ḍamma" onclick="letsdo('ُ')"
+                                value="ُ&nbsp;"></td>
+                        <td><input type="button" class="btb key__button" title="tanwīn -un" onclick="letsdo('ٌ')"
+                                value="ٌ&nbsp;">
                         </td>
-                        <td><input type="button" class="btb key__button" title="šadda" onclick="alpha('ّ')" value="ّ&nbsp;"></td>
-                        <td><input type="button" class="btb key__button" title="sukūn" onclick="alpha('ْ')" value="ْ&nbsp;"></td>
-                        <td><input type="button" class="btb key__button" title="kasra" onclick="alpha('ِ')" value="ِ&nbsp;"></td>
-                        <td><input type="button" class="btb key__button"  title="tanwīn -in" onclick="alpha('ٍ')" value="ٍ&nbsp;">
+                        <td><input type="button" class="btb key__button" title="šadda" onclick="letsdo('ّ')"
+                                value="ّ&nbsp;"></td>
+                        <td><input type="button" class="btb key__button" title="sukūn" onclick="letsdo('ْ')"
+                                value="ْ&nbsp;"></td>
+                        <td><input type="button" class="btb key__button" title="kasra" onclick="letsdo('ِ')"
+                                value="ِ&nbsp;"></td>
+                        <td><input type="button" class="btb key__button" title="tanwīn -in" onclick="letsdo('ٍ')"
+                                value="ٍ&nbsp;">
                         </td>
                     </tr>
                 </tbody>
@@ -135,10 +145,11 @@
             <table class="tab-kb">
                 <tbody>
                     <tr>
-                        <td><input type="button" class="bt key__button" onclick="alpha('؟')" value="؟"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('؛')" value="؛"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('،')" value="،"></td>
-                        <td><input type="button" class="bt key__button" title="tatwil" onclick="alpha('ـ')" value="ـ"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('؟')" value="؟"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('؛')" value="؛"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('،')" value="،"></td>
+                        <td><input type="button" class="bt key__button" title="tatwil" onclick="letsdo('ـ')" value="ـ">
+                        </td>
                     </tr>
                 </tbody>
             </table> <br>
@@ -160,21 +171,23 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٠')" value="٠"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('١')" value="١"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٢')" value="٢"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٣')" value="٣"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٤')" value="٤"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٥')" value="٥"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٦')" value="٦"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٧')" value="٧"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٨')" value="٨"></td>
-                        <td><input type="button" class="bt key__button" onclick="alpha('٩')" value="٩"></td>
-                        <td><input type="button" class="bt key__button" title="séparateur de milliers" onclick="alpha('٬')"
-                                value="٬"></td>
-                        <td><input type="button" class="bt key__button" title="séparateur décimal" onclick="alpha('٫')" value="٫">
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٠')" value="٠"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('١')" value="١"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٢')" value="٢"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٣')" value="٣"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٤')" value="٤"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٥')" value="٥"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٦')" value="٦"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٧')" value="٧"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٨')" value="٨"></td>
+                        <td><input type="button" class="bt key__button" onclick="letsdo('٩')" value="٩"></td>
+                        <td><input type="button" class="bt key__button" title="séparateur de milliers"
+                                onclick="letsdo('٬')" value="٬"></td>
+                        <td><input type="button" class="bt key__button" title="séparateur décimal" onclick="letsdo('٫')"
+                                value="٫">
                         </td>
-                        <td><input type="button" class="bt key__button" title="pourcentage" onclick="alpha('٪')" value="٪"></td>
+                        <td><input type="button" class="bt key__button" title="pourcentage" onclick="letsdo('٪')"
+                                value="٪"></td>
                     </tr>
                 </tbody>
             </table>
